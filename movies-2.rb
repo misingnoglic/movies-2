@@ -239,8 +239,10 @@ puts b.predict(1,1) #prediction of what user 1 rated toy story
 puts b.rating(1,1) #what they actually rated toy story
 print b.viewers(1) #the list of users that rated toy story
 print "\n\n"
-
-c = b.run_test(200) #test for the first 100 items in u1.test
+x = Time.now
+c = b.run_test() #test for the first 100 items in u1.test
+puts "total time"
+puts Time.now-x
 puts "mean error"
 puts c.mean #mean error of prediction
 puts  "std of error"
