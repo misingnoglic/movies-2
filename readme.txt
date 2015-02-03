@@ -8,9 +8,9 @@ My algorithm for predicting a movie rating is to go through all the users in the
 I then multiplied that rating by the similarity to the user, to create a scaled average (users that are more similar to the
 user in question have their ratings weighted higher)
 
-The algorithm isn't perfect, but it seems to be around 1 off. It's more accurate for more popular movies.
+The algorithm isn't perfect, but it seems to be around 1-2 off. It's more accurate for more popular movies.
 
-THe downside to the algorithm is that it takes an extremely long time to run. One example run took 247 seconds
+THe downside to the algorithm is that it takes an extremely long time to run. One example run took 247 seconds. The time will increase greatly with the size of the input, because for each added person, it will need to compute their similarity to each other user (which is fairly complex in itself), which means an exponential time increase. 
 
 Here's the stats on u1
 mean error
